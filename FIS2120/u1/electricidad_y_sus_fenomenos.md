@@ -50,3 +50,51 @@ Podemos destacar tres propiedades de las cargas eléctricas:
 Esta propiedad nos indica que la carga neta de un objecto
 no se crea ni se destruye, solo se transfiere. Esto significa
 que en una interacción, el número de cargas no debería cambiar.
+
+### Contando cargas eléctricas
+
+En la antiguedad, se pensaba que los fenómenos eléctricos cometidos por flujos
+de cargas, eran en realidad hechos por sustancias viscosas. **La física moderna
+descubrió que no era así**, si no que los fenómenos eléctricos se dan en general
+por objetos corpusculares que poseen una unidad básica de carga eléctrica igual
+a la de un electrón.
+
+### Cargando objetos
+
+Además del "método de la frotación", existen otros dos métodos para cargar un objeto
+estos son el método de inducción y el de contacto.
+Observaciones microscópicas de la materia demuestran que a una escala atómica, las
+particulas tienen mayor facilidad de moverse son los electrones.
+
+#### Método de la frotación
+
+Consideremos dos varillas de plástico que son frotadas por piel, y luego dos varillas
+de vidrio frotadas por seda, Qué sucederá cuando se intenta acercar dos barras
+del mismo tipo?, y, qué sucederá cuando se intenta lo mismo con dos barras de
+tipo diferente?
+
+### Método por contacto
+
+Se acerca una barra cargada positivamente a una esfera neutra.
+
+Las cargas negativas de la esferas serán trasladadas a la barra
+
+### Método por inducción
+
+Una barra negativa se acerca a una esfera neutra. Al conectar la esfera a tierra
+las cargas de la barra se transfieren a la barra. La barra mantiene las cargas
+positivas de la esfera y esta se vuelve positiva.
+
+## Tipos de materiales
+
+Conductores: Baja oposición
+
+Semiconductores:
+
+Aislantes: Alta oposición
+
+## Ley de Coulomb
+
+$$
+|F_1| = |F_2| = k_e  \cfrac{|q_1 \times q_2|}{r^2}
+$$
