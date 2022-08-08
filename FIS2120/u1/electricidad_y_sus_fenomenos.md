@@ -73,13 +73,13 @@ de vidrio frotadas por seda, Qué sucederá cuando se intenta acercar dos barras
 del mismo tipo?, y, qué sucederá cuando se intenta lo mismo con dos barras de
 tipo diferente?
 
-### Método por contacto
+#### Método por contacto
 
 Se acerca una barra cargada positivamente a una esfera neutra.
 
 Las cargas negativas de la esferas serán trasladadas a la barra
 
-### Método por inducción
+#### Método por inducción
 
 Una barra negativa se acerca a una esfera neutra. Al conectar la esfera a tierra
 las cargas de la barra se transfieren a la barra. La barra mantiene las cargas
