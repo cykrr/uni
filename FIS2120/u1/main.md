@@ -62,27 +62,6 @@ adquiriendo así una carga negativa.
 Nótese que sin observación previa no podemos saber ni el sentido del traspaso de
 la energía ni cuales objetos tienen carga positiva o negativa.
 
-### Propiedad: La carga es cuantizada
-
-Las cargas eléctricas se pueden contar. Es decir, existe una unidad mínima de
-carga y todas las cargas son múltiplos enteros de esta.
-
-Ejemplos de cantidades físicas **no** cuantizadas:
-
-- Tiempo
-- Masa
-- Energía
-
-El electrón y el protón son las mínimas cargas eléctricas con las que
-trabajaremos. Teniendo una carga de $-e$ y $+e$ respectivamente.
-
-Las cargas eléctricas son comúnmente representadas con la letra $q$. Donde:
-
-$$
-q = Ne
-$$
-
-Con $N$ un número entero que representa la cantidad de cargas transferidas
 
 ## Conductores y aisladores (23.2)
 
@@ -117,10 +96,121 @@ vuelven superconductores.
 
 ## Conservación y cuantización de la carga eléctrica
 
+### Propiedad: La carga es cuantizada
+
+Las cargas eléctricas se pueden contar. Es decir, existe una unidad mínima de
+carga y todas las cargas son múltiplos enteros de esta.
+
+Ejemplos de cantidades físicas **no** cuantizadas:
+
+- Tiempo
+- Masa
+- Energía
+
+El electrón y el protón son las mínimas cargas eléctricas con las que
+trabajaremos. Teniendo una carga de $-e$ y $+e$ respectivamente.
+
+Las cargas eléctricas son comúnmente representadas con la letra $q$. Donde:
+
+$$
+q = Ne
+$$
+
+Con $N$ un número entero que representa la cantidad de cargas transferidas
+
 ## Ley de Coulomb
+
+Desarrollada por Charles-Augustin de Coulomb. Es equivalente a la ley de
+gravitación universal que se usa en física clásica.
+
+$$
+Fg = G \cdot \cfrac {m1 \cdot m2} {r^2}
+$$
+
+Esta fórmula nos da la fuerza con las que dos masas se atraen una a la otra.
+
+Coulomb utilizó una balanza de torsión. Método que le sirvió para poder medir
+cargas eléctricas sumamente pequeñas.
+
+- De lo anterior Coulomb concluyó que:
+  - La fuerza es directamente proporcional al producto de la magnitud de las
+  cargas
+  - La fuerza es inversamente proporcional a la distancia al cuadrado entre
+  estas dos cargas
+
+  Obteniendo así la fórmula postulada en la ley de Coulomb:
+  $$
+  Fe = K_e \cdot \cfrac{q_1 \cdot q_2} {r^2}
+  $$
+
+  dónde $K_e$ es la constante eléctrica de Coulomb.
+  $$
+  K_e = 8.987 \times 10^9 [ \cfrac{N  m^2}{C^2} ]
+  $$
+
+  Con C como la unidad Coulomb. Esta es la unidad de medida de la carga
+  eléctrica, la cual equivale a la carga eléctrica transferida en un segundo
+  a una corriente de 1 Amperio
+
+  $$
+  1C = \text{Carga de} \space  6.24 \times 10^{18} \text {protones}
+  $$
+
+### Ley de Coulomb vectorial
+
+$$
+\vec{F}_{12} = K_e \cdot \cfrac{q_1 \cdot q_2} {r^2} \cdot \vec r
+$$
+
+Esta forma rescata dos postulados de Coulomb.
+
+- La fuerza tiene una dirección a lo largo de la línea que forman las dos cargas
+- La fuerza es atractiva o repulsiva dependiendo de la polaridad de las mismas.
+
+Una buena manera de obtener la dirección del vector es realizar una
+representación gráfica de las cargas involucradas en el sistema.
+
+La siguiente ecuación siempre es válida, **sin importar la magnitud de las
+cargas**.
+$$
+F_{12} = -F_{21}
+
+$$
 
 ## Campo eléctrico
 
-## Lineas de campo eléctrico
+Se define campo eléctrico como toda región del espacio que rodea a un cuerpo
+cargado (carga fuente), tal que, al colocar en dicha región una pequeña carga
+positiva (carga de prueba) habrán fuerzas que actúan sobre esta.
+
+Es importante mencionar que el campo eléctrico es un **campo de fuerzas
+conservativas**.
+
+Un campo eléctrico puede generarse alrededor de una o varias cargas.
+
+Dada una partícula arbitraria $Q$ y otra partícula arbitraria $q$ a una
+distancia $r$.
+
+Sabemo que la fuerza de una partícula sobre otra es
+
+$$
+\vec{F} = K_e \cdot \cfrac{q \cdot Q} {r^2} \cdot \vec r
+$$
+
+Introducimos el concepto de campo eléctrico, el cual será representado con
+$\vec E$, en este caso en la locación de $q$.
+
+$$
+\vec E_p = \frac {\vec F} {q}
+$$
+
+Reemplazando la ecuación anterior en el campo eléctrico cancelamos el valor
+de la carga $q$:
+
+$$
+\vec E _p  = \frac{QK_e} {r^2} \vec r [\cfrac N C]
+$$
+
+### Lineas de campo eléctrico
 
 ## Dipolos eléctricos
