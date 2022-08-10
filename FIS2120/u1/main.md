@@ -156,6 +156,19 @@ cargas eléctricas sumamente pequeñas.
   1C = \text{Carga de} \space  6.24 \times 10^{18} \text {protones}
   $$
 
+#### Constante eléctrica conveniente
+
+Habrá muchos casos en los que tendremos que trabajar con funciones 
+trigonométricas, es por esto que se define una nueva constante que representa
+la **permitividad dielectrica en el vacío** y se representa con la letra
+$\varepsilon _0$.
+
+De este modo podemos definir la 
+constante eléctrica como:
+$$
+K_e = \cfrac{1}{4\pi \varepsilon_0}
+[\cfrac {C^2}{Nm^2}]
+$$
 ### Ley de Coulomb vectorial
 
 $$
@@ -172,9 +185,9 @@ representación gráfica de las cargas involucradas en el sistema.
 
 La siguiente ecuación siempre es válida, **sin importar la magnitud de las
 cargas**.
+
 $$
 F_{12} = -F_{21}
-
 $$
 
 ## Campo eléctrico

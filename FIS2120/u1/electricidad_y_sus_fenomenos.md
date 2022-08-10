@@ -23,8 +23,8 @@ Describen cualquier situación observable.
 
 Quiénes son los participantes en una interacción eléctrica?
 
-Son los cuerpos que poseen caga eléctrica, propiedad análoga a la
-masa en gravitación.
+Son los cuerpos que poseen caga eléctrica, propiedad análoga a la masa en
+gravitación.
 
 * Cargas opuestas se atraen
 * Cargas iguales se repelen
@@ -47,9 +47,9 @@ Podemos destacar tres propiedades de las cargas eléctricas:
 
 ### Conservación de la carga eléctrica
 
-Esta propiedad nos indica que la carga neta de un objecto
-no se crea ni se destruye, solo se transfiere. Esto significa
-que en una interacción, el número de cargas no debería cambiar.
+Esta propiedad nos indica que la carga neta de un objecto no se crea ni se
+destruye, solo se transfiere. Esto significa que en una interacción, el número
+de cargas no debería cambiar.
 
 ### Contando cargas eléctricas
 
@@ -61,17 +61,17 @@ a la de un electrón.
 
 ### Cargando objetos
 
-Además del "método de la frotación", existen otros dos métodos para cargar un objeto
-estos son el método de inducción y el de contacto.
-Observaciones microscópicas de la materia demuestran que a una escala atómica, las
-particulas tienen mayor facilidad de moverse son los electrones.
+Además del "método de la frotación", existen otros dos métodos para cargar un
+objeto estos son el método de inducción y el de contacto. 
+Observaciones microscópicas de la materia demuestran que a una escala atómica,
+las particulas tienen mayor facilidad de moverse son los electrones.
 
 #### Método de la frotación
 
-Consideremos dos varillas de plástico que son frotadas por piel, y luego dos varillas
-de vidrio frotadas por seda, Qué sucederá cuando se intenta acercar dos barras
-del mismo tipo?, y, qué sucederá cuando se intenta lo mismo con dos barras de
-tipo diferente?
+Consideremos dos varillas de plástico que son frotadas por piel, y luego dos
+varillas de vidrio frotadas por seda, Qué sucederá cuando se intenta acercar dos
+barras del mismo tipo?, y, qué sucederá cuando se intenta lo mismo con dos
+barras de tipo diferente?
 
 #### Método por contacto
 
@@ -89,7 +89,8 @@ positivas de la esfera y esta se vuelve positiva.
 
 Conductores: Baja oposición
 
-Semiconductores:
+Semiconductores: Oposición variable
+según las condiciones del ambiente
 
 Aislantes: Alta oposición
 
