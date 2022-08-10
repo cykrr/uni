@@ -19,7 +19,8 @@ Puede ser resuelto con algoritmos.
 
 Por ejemplo: Dado un entero positivo $n$, encuentre un factor primo de $n$.
 
-Al igual que un algoritmo, se define por una entrada o un **conjunto de instancias** y una salida 
+Al igual que un algoritmo, se define por una entrada o un **conjunto de
+instancias** y una salida.
 
 ### Clasificación de problemas
 
@@ -65,11 +66,11 @@ Problemas más dificiles del conjunto NP
 
 ### Correctitud
 
-Teorema 1: El algoritmo InsertionSort genera un arreglo: $[a_1', a_2', ..., a_n']$, con los mismos
-elementos del arreglo de entrada ordenados de menor a mayor, es decir $a_1' \geq  a_2', \geq ..., a_n'$
+Teorema 1: El algoritmo InsertionSort genera un arreglo:
+$[a_1', a_2', ..., a_n']$, con los mismos elementos del arreglo de entrada
+ordenados de menor a mayor, es decir $a_1' \geq  a_2', \geq ..., a_n'$
 
-Propiedad que distingue a un algoritmo de un 
-procedimiento efectivo.
+Propiedad que distingue a un algoritmo de un procedimiento efectivo.
 
 Un algoritmo es correcto si:
 
@@ -82,14 +83,13 @@ Un algoritmo es correcto si:
 Propiedad lógica que permite estudiar un programa
 o un algoritmo.
 
-las invariantes de los bucles son predicados logicos, que sirven para probar los algoritmos que
-los utilizan, en particular en la correción de
-estos algoritmos.
+las invariantes de los bucles son predicados logicos, que sirven para probar los
+algoritmos que los utilizan, en particular en la correción de estos algoritmos.
 
 
 ### Tiempo de ejecución InsertionSort
 
 En el peor caso $O(n^2)$. Se analiza el código,
-se ve cuantas instrucciones realiza en el peor caso, el cual se da cuando el arreglo está ordenado
-de mayor a menor.
+se ve cuantas instrucciones realiza en el peor caso, el cual se da cuando el
+arreglo está ordenado de mayor a menor.
 
