@@ -8,22 +8,22 @@
 |   |   | La etica una dimension constitutiva del ser humano
 
 
-Primera unidad: Tener el lenguaje necesario para el desarrollo de otros elementos
+Primera unidad: Tener el lenguaje necesario para el desarrollo de otros
+elementos.
 
-la etica es una parte de la filosofia y posee un lenguaje racional
+la etica es una parte de la filosofia y posee un lenguaje racional, no hablamos
+de lo subjetivo, nos confrontamos a elementos formales.
 
-No hablamos de lo subjetivo, nos confrontamos a elementos formales.
-
-La gracia de una propuesta clásica es que se piensa
-que el conjunto de elementos puede ser definido 
-de igual manera que los elementos de las matemáticas.
+La gracia de una propuesta clásica es que se piensa que el conjunto de elementos
+puede ser definido de igual manera que las definiciones matemáticas.
 
 
-Por qué podemos definir con rigor las matemáticas y no otros conceptos como la amistad?
-
-Este es la conjetura identificada por Platón y trabajada posteriormente por Aristóteles.
+Por qué podemos definir con rigor las matemáticas y no otros conceptos como la
+amistad? Este es la conjetura identificada por Platón y trabajada posteriormente
+por Aristóteles.
  
-Traduce ciertas intuiciones de los cristianos por medio de un lenguaje formal.
+La ética cristiana traduce ciertas intuiciones de los cristianos por medio de un
+lenguaje formal.
 
 ## Segunda unidad:
 
@@ -50,7 +50,7 @@ No es lo mismo el concepto de felicidad de Aristóteles y de Tomás de Aquino (A
 El trabajo de semestre no debe ser realizado.
 
 
-Apologia de Sócrates
+**Libro: Apologia de Sócrates**
 
 ## Ética y mediación moral
 
@@ -201,7 +201,10 @@ conduta que nos lleva hacia la felicidad.
 termino moral: origen latino, cumplimiento de habitos y costumbres que nos
 pueden hacer feliz.
 
-COMPRENDER QUE LA PREGUNTA ETICA, AUNQUE NO ABORDADA SISTEMATICAMENTE SIEMPRE ESTAMOS IMPLICADOS EN UNA VALORACIÓN ETICA. ES NECESARIO COMO MINIMO SER CONCIENTES DE ELLA. DE LO CONTRARIO AL RENUNCIAR A LA MORAL NOS CONVERTIMOS EN MALAS PERSONAS. 
+COMPRENDER QUE LA PREGUNTA ETICA, AUNQUE NO ABORDADA SISTEMATICAMENTE SIEMPRE
+ESTAMOS IMPLICADOS EN UNA VALORACIÓN ETICA. ES NECESARIO COMO MINIMO SER
+CONCIENTES DE ELLA. DE LO CONTRARIO AL RENUNCIAR A LA MORAL NOS CONVERTIMOS EN
+MALAS PERSONAS. 
 
 de que se trata un ramo de etica
 
