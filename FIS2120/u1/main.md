@@ -191,7 +191,7 @@ Un campo eléctrico puede generarse alrededor de una o varias cargas.
 Dada una partícula arbitraria $Q$ y otra partícula arbitraria $q$ a una
 distancia $r$.
 
-Sabemo que la fuerza de una partícula sobre otra es
+Sabemos que la fuerza de una partícula sobre otra es
 
 $$
 \vec{F} = K_e \cdot \cfrac{q \cdot Q} {r^2} \cdot \vec r
