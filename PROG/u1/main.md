@@ -313,8 +313,8 @@ para una lista enlazada.
 public class LinkedList {
         // Estructura de la clase {
 
-        private Node *head;
-        private Node *current;
+        private Node head;
+        private Node current;
 
         public int longitud;
 
