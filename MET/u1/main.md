@@ -22,6 +22,7 @@ términos.
 
 Por ejemplo: Podemos usar la serie de Taylor para calcular el seno de cualquier
 ángulo.
+
 $$
 sin(x) =
 x - \cfrac{x^3}{3!} + \cfrac{x^5} {5!} - \cfrac{x^7} {7!} + ...
@@ -43,6 +44,7 @@ Recordando que cada número lo podemos representar como una fracción llamada
 [Mantissa](https://es.wikipedia.org/wiki/Mantisa), la cual está multiplicada por
 una potencia del número base, llamada generalmente exponente. Entonces tenemos
 números como los siguientes.
+
 $$
 \begin {aligned}
 0.3864 \times 10^4 &= 3864 \\
@@ -84,9 +86,11 @@ Cómo cuantificamos la exactitud y la presición?
 
 **Teorema**: Se dice que $\bar x$ aproxima a $x$ con $k$ dígitos significatvos
 si $k$ es el entero más grande positivo para el cual se cumple que:
+
 $$
 \cfrac{|x - \bar x|} {x} \leq 5 \cdot 10^{-k}
 $$
+
 $$
 \varepsilon \bar x \leq 5 \cdot 10 ^ {-k}
 $$
@@ -102,6 +106,7 @@ $\bar x$ tiene al menos $k-1$ cifras exactas.
 ### Cifras decimales exactas
 **Teorema**: Sea $\bar x$ una aproximación de un cierto número $x$ y sabe que
 $\bar x$ aproxima a $x$ con $k$ cifras decimales exactas si:
+
 $$
 E\bar x = | x - \bar x | \leq 0.5 \cdot 10^{-k}
 $$
@@ -114,6 +119,7 @@ $$
 
 Sea $x$ el valor exacto y $\bar x$ una aproximación del mismo, se
 denota al error absoluto como $E \bar x$ y se define como:
+
 $$
 E \bar x = |x - \bar x| = \text {Valor real - Aproximación}
 $$
@@ -132,9 +138,11 @@ Pone en perspectiva la dimensió del error que se está realizando.
 
 Sea $x$ el valor exacto y $\bar x$ una aproximación. Se denota
 $\varepsilon \bar x$ al error relativo y se define como:
+
 $$
 \varepsilon \bar x = \cfrac{|x - \bar x|}{|x|}\\
 $$
+
 $$
 \varepsilon \bar x = \cfrac{E \bar x}{|x|}
 $$
