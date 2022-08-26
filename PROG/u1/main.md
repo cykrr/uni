@@ -9,6 +9,7 @@
 ### Java
 
 Qué es java?
+
 * Lenguaje de programación orientado a objetos
 * Plataforma de ejecución para programas escritos en el
 lenguaje Java
@@ -17,6 +18,7 @@ Este lenguaje fue desarrollado por un equipo de
 investigadores de *SUN Microsystems*.
 
 Java permite:
+
 * Construir *aplicaciones*: Programas computacionales que
 apoyan el trabajo o resuelven problemas específicos de
 usuarios *(stand-alone)*
@@ -24,6 +26,7 @@ usuarios *(stand-alone)*
 ejecutan al momento de cargar una págna web.
 
 Java se compone de:
+
 * Compilador (Java-compiler)
 * Intérprete (Java)
 * Biblioteca de clases (Java API)
@@ -57,6 +60,7 @@ asociadas.
 ### Tipos de datos primitivos
 
 Java soporta los siguientes tipos de datos primitivos:
+
 * Entero
 * Punto flotante
 * Lógico
@@ -65,6 +69,7 @@ Java soporta los siguientes tipos de datos primitivos:
 #### Familia de datos primitivos (contables)
 
 ##### Familia de datos enteros: `byte, short, int, long`
+
 | Tipo  | Almacena        | Rango          |
 | --    | --              | --             |
 | `byte`| Entero de 8-bit | -128 hasta 127 |
@@ -84,7 +89,7 @@ Java soporta los siguientes tipos de datos primitivos:
 El `String` es un tipo de dato que permite trabajar con
 cadenas de caracteres, por ejemplo:
 
-```
+```java
 "Hola mundo",
 "Mario Mora",
 "12/10/99",
@@ -98,34 +103,35 @@ se utiliza en forma muy similar a estos últimos.
 #### Operadores básicos para tipos primitivos
 
 * Operador de asignación:
-    *   `=`
+  * `=`
 * Operadores numéricos
-    * Binarios:
-        * `+` Suma
-        * `-` Resta
-        * `*` Multiplicación
-        * `/` División
-        * `%` Módulo / resto de la división entera
-    * Unarios:
-        * `++` Auto-incremento
-        * `--` Auto-decremento
+  * Binarios:
+    * `+` Suma
+    * `-` Resta
+    * `*` Multiplicación
+    * `/` División
+    * `%` Módulo / resto de la división entera
+  * Unarios:
+    * `++` Auto-incremento
+    * `--` Auto-decremento
 * Operadores relacionales:
-    * `==` Igual a
-    * `!=` Distinto de
-    * `>` Mayor que
-    * `<=` Menor o igual que
-    * `>` Mayor que
-    * `>=` Mayor o igual que
+  * `==` Igual a
+  * `!=` Distinto de
+  * `>` Mayor que
+  * `<=` Menor o igual que
+  * `>` Mayor que
+  * `>=` Mayor o igual que
 * Operadores lógicos:
-* `&&` (AND)
-* `||` (OR)
-* `!` (NOT)
+  * `&&` (AND)
+  * `||` (OR)
+  * `!` (NOT)
 
 ### Estructuras de control
 
 #### Decisión
 
 Simple
+
 ```java
 if (condicion) foo;
 
@@ -138,7 +144,9 @@ else
     bar;
 
 ```
+
 Compleja
+
 ```java
 if (condicion)
 {
@@ -214,14 +222,13 @@ funciones. De esta manera podemos saber de antemano:
 
 * Qué parámetros utiliza una función
 * Qué hace la función
-* Cuál es la entrada/salida de la función 
+* Cuál es la entrada/salida de la función
 
 --
 
 * Para qué es una clase
 * Como usar una interfaz
 * Que hace un constructor
-
 
 ```java
 /** El método addCallback añade una función
@@ -260,14 +267,15 @@ byte edad = 20;
 ## Algunos métodos de utilidad
 
 * Convertir de String a número:
-    * `Byte.parseByte()`
-    * `Short.parseShort()`
-    * `Integer.parseInt()`
-    * `Float.parseFloat()`
-    * `Double.parseDouble()`
+  * `Byte.parseByte()`
+  * `Short.parseShort()`
+  * `Integer.parseInt()`
+  * `Float.parseFloat()`
+  * `Double.parseDouble()`
 
 Por ejemplo:
-```
+
+```java
 x = Integer.pareseInt("24242");
 y = Integer.pareseFloat(payload) + 40;
 ```
@@ -286,11 +294,11 @@ public class IdentificadorClase
 
 ```
 
-Muchas de estas palabras claves pueden no ser reconocidas 
-facilmente. Con el objetivo de aclararlo describiré 
+Muchas de estas palabras claves pueden no ser reconocidas
+facilmente. Con el objetivo de aclararlo describiré
 brevemente algunos conceptos
 
-#### Clases
+### Clases
 
 Las clases son uno de los pilares fundamentales de la
 orientación a objetos. Estas nos ayudan a abstraer
@@ -299,7 +307,7 @@ funcionalidades de una manera similar a las funciones.
 Las clases están constituidas por un conjunto de
 variables y métodos.
 
-##### Qué es un método?
+#### Qué es un método?
 
 Un método es una función que forma parte de una clase.
 La diferencia entre el método y la función es que el
