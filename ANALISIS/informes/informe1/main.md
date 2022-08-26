@@ -204,7 +204,7 @@ plt.show()
 
 ![Figure_1.png](Figure_1.png)
 
-Como podemos observar, dado un arreglo aleatorio ambos algoritmos de comportan
+Como podemos observar, dado un arreglo aleatorio ambos algoritmos se comportan
 de manera similar hasta un tamaño de 200 elementos. Sin embargo a medida que
 nos alejamos de esta cifra la diferencia aumenta considerablemente. Como el peor
 caso señalado en la gráfica es el mismo para ambos algoritmos podemos concluir
