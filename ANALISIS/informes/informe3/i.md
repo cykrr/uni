@@ -322,16 +322,15 @@ tamaño es la mitad del problema inicial. Además de la llamada a la función
 `maxCenter`. Cuya complejidad es de $O(n)$. De esto obtenemos que la función de
 recurrencia del algoritmo `maxSubArray` es la siguiente:
 
+$$
+T(n) \leq 2\cdot T \left ( n/2 \right ) + O(n)
+$$
+
 ### Caso base
 
 El algoritmo es correcto para un arreglo que de un elemento. Esto es debido a
 que cuando recibimos un elemento retornamos su posición y su valor como suma
 máxima.
-
-
-$$
-T(n) \leq 2\cdot T \left ( n/2 \right ) + O(n)
-$$
 
 En el apartado anterior comprobamos que la parte $O(n)$ de la función de
 recurrencia es correcta. Podemos comprobar si el resto del algoritmo lo es por
