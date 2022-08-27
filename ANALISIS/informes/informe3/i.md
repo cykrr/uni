@@ -302,7 +302,7 @@ elemento del arreglo $A$. $S = SM$.
     el nuevo valor
 * El elemento actual **no** aumenta el valor de la suma.
     * Mantenemos $SM$ intacto
-    * Se cumple que $S<SM$
+    * Se cumple que ${S} < {SM}$
 
 Para finalizar la iteración aumentamos en $1$ el valor de $i$.
 
