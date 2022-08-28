@@ -36,7 +36,7 @@ for i in range (n-1):
         currentSum += num[j];
 ```
 
-Es necesario calcular cada subarray pasando por cada posible subarreglo? 
+Es necesario calcular cada subarray pasando por cada posible subarreglo?
 No es mandatorio. Podemos recorrer el arreglo y descartar todos los valores
 negativos antes de cada valor positivo. Entonces podemos movernos hasta el
 primer valor positivo sin complicaciones. Esto se conoce como el algoritmo de
@@ -44,7 +44,7 @@ Kadane y tiene una complejidad  $O(n)$.
 
 ## Descripción del algoritmo
 
-Existen distintas formas de resolver este problema, distintos algoritmos con 
+Existen distintas formas de resolver este problema, distintos algoritmos con
 distintos tiempos de ejecución. En el presente informe trabajaremos con la
 solución recursiva y posteriormente la compararemos con el algoritmo de Kadane.
 
@@ -68,10 +68,11 @@ El subarreglo máximo:
 * Es un subarreglo de $R$
 * Está entre los dos subarreglos
 
-El arreglo central $C$ es revisado de manera lineal. Mientras que los arreglos $L$ y $R$ son revisados de manera recursiva, estos se dividen hasta llegar al
+El arreglo central $C$ es revisado de manera lineal. Mientras que los arreglos
+$L$ y $R$ son revisados de manera recursiva, estos se dividen hasta llegar al
 caso base.
 
-#### Caso base:
+### Caso base
 
 El caso base se da cuando la longitud del arreglo es de un elemento, donde la
 suma máxmia es su único elemento.
@@ -89,7 +90,8 @@ junto con los índices que indican los límites del subarreglo máximo.
 
 ### Conclusión del algoritmo
 
-Para finalizar, retornamos la mayor entre la suma central, la suma izquierda y la suma derecha.
+Para finalizar, retornamos la mayor entre la suma central, la suma izquierda y
+la suma derecha.
 
 ## Implementación
 
@@ -182,7 +184,8 @@ print("} Resultado", s,a[b:c])
 ```
 
 *Results:*
-```
+
+```python
 [1, -2, 3] {
   Recursión izquierda [1] {
     [1]: Caso base
@@ -225,34 +228,36 @@ print("} Resultado", s,a[b:c])
 ## Ejemplo detallado del algoritmo
 
 Para el caso de $A: [1, -2, 3]$ dividimos en el punto central, obteniendo los
-subarreglos 
+subarreglos
 
-$$L: [1]$$ 
+$$L: [1]$$
 
 $$R: [-2, 3]$$
 
 Trabajando con $L:$
 
-* Caso base, retornamos el valor y su posición, $(Suma, l, r) = (1, 0, 1)$ 
+* Caso base, retornamos el valor y su posición, $(Suma, l, r) = (1, 0, 1)$
 * Obtenemos $L = [1]$
 
 Trabajando con $R:$
-  * Dividimos en 
-    * $R_L: [-2]$
-        * Caso base
-    * $R_R: [3]$
-        * Caso Base
-  * Entre $R_L$ y $R_R$ nos quedamos con el mayor $R_R = [3]$
-  * Obtenemos $R = [3]$
+
+* Dividimos en
+  * $R_L: [-2]$
+    * Caso base
+  * $R_R: [3]$
+    * Caso Base
+* Entre $R_L$ y $R_R$ nos quedamos con el mayor $R_R = [3]$
+* Obtenemos $R = [3]$
 
 Trabajando con $C$
-  * Iteramos del centro a la izquierda
-      * Pasamos por el 1 y lo incluimos pues es el primer valor que encontramos
-  * Iteramos del centro a la derecha
-    * Pasamos por el -2 y lo incluimos pues es el primer valor que nos
-    encontramos
-    * Pasamos por el 3 y lo incluimos pues aumenta el valor de nuestra suma total
-  * Obtenemos $C: [1, -2, 3]$
+
+* Iteramos del centro a la izquierda
+  * Pasamos por el 1 y lo incluimos pues es el primer valor que encontramos
+* Iteramos del centro a la derecha
+  * Pasamos por el -2 y lo incluimos pues es el primer valor que nos
+  encontramos
+  * Pasamos por el 3 y lo incluimos pues aumenta el valor de nuestra suma total
+* Obtenemos $C: [1, -2, 3]$
 
 Comparamos los resultados:
 
@@ -262,7 +267,7 @@ $$
 ( sum(L) = 1 ) < (sum(C) = 2) < (sum(R) = 3)
 $$
 
-Obteniendo así como resultado el subarreglo $R = [3]$ 
+Obteniendo así como resultado el subarreglo $R = [3]$
 
 ## Correctitud del algoritmo
 
@@ -278,7 +283,6 @@ Es decir, se recorre a la izquierda con un ciclo y a la derecha con otro.
 Para cada bucle necesitamos dos datos. Definimos la **suma** $S$ como la suma
 de todos los elementos visitados y la **suma maxima** $SM$ como la suma que posee
 sólo los elementos que maximizan la suma.
-
 
 **Propiedad invariante**: En todo momento la suma máxima será menor o igual a la
 suma de todos los elementos. Es decir $S \leq SM$.
@@ -297,12 +301,12 @@ elemento del arreglo $A$. $S = SM$.
 **Mantención**: En cada iteración tenemos dos posibles casos
 
 * El elemento actual aumenta el valor de la suma
-    * Le asignamos el valor $S = SM$
-    * Actualizamos el límite para que incluya
+  * Le asignamos el valor $S = SM$
+  * Actualizamos el límite para que incluya
     el nuevo valor
 * El elemento actual **no** aumenta el valor de la suma.
-    * Mantenemos $SM$ intacto
-    * Se cumple que ${S} < {SM}$
+  * Mantenemos $SM$ intacto
+  * Se cumple que ${S} < {SM}$
 
 Para finalizar la iteración aumentamos en $1$ el valor de $i$.
 
@@ -325,8 +329,6 @@ recurrencia del algoritmo `maxSubArray` es la siguiente:
 $$
 T(n) \leq 2\cdot T \left ( n/2 \right ) + O(n)
 $$
-
-### Caso base
 
 El algoritmo es correcto para un arreglo que de un elemento. Esto es debido a
 que cuando recibimos un elemento retornamos su posición y su valor como suma
