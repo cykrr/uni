@@ -95,95 +95,9 @@ la suma derecha.
 
 ## Implementación
 
-```python
-import math
-def maxCenter(a, c, l, r, level = 0, Verbose = False):
-#    if Verbose: print(a[l:r])
-    ls = -math.inf
-    rs = -math.inf
-    s = 0 
-    ll = c-1
-    lr = c
-    rl = c 
-    rr = len(a)
-    if Verbose: print (" " * level * 2 + "Recorrido izquierda: ");
-    for i in range (c-1, l-1, -1):
-        if Verbose: print(" " * (level + 1)* 2 + "Pasando por " + str(a[i]))
-        s += a[i]
-        if ls < s:
-            if Verbose: print(" " * (level + 2) * 2 + "Incluyo")
-            ls = s;
-            ll = i
-        else: 
-            if Verbose: print(" " * (level + 2) * 2 + "No Incluyo")
-    s = 0;
-    if Verbose: print (" " * level * 2 + "Recorrido derecha: ");
-    for i in range (c, r):
-        if Verbose: print(" " * (level + 1)* 2 + "Pasando por " + str(a[i]))
-        s += a[i]
-        if rs < s:
-            if Verbose: print(" " * (level + 2) * 2 + "Incluyo")
-            rs = s
-            rr = i+1
-        else: 
-            if Verbose: print(" " * (level + 2) * 2 + "No Incluyo")
+```c```
 
-    return ls + rs, ll, rr;
-
-    
-        
-        
-def maxSubArray(a, l = -1, r = -1, level = 0, Verbose = False):
-    if l == -1 and r == -1:
-      l = 0;
-      r = len(a);
-
-    if ( r-l == 1):
-      if Verbose: print(a[l:r], "{")
-      if Verbose: print(" " * 2 * level + str(a[l:r]) + ": Caso base")
-      return a[r-1], l, r 
-
-    if Verbose: print(a[l:r], "{")
-#    if Verbose: print("L: ", l, "R: ", r)
-
-    c = (l + r) // 2
-
-    level +=1
-
-    if Verbose: print(" " * level * 2 + "Recursión izquierda ", end = "")
-    ls, ll, lr = maxSubArray(a, l, c, level = level + 1, Verbose = Verbose);
-    if Verbose: print (" " * level * 2 + "} Resultado: ", ls, a[ll:lr])
-    if Verbose: print()
-    if Verbose: print(" " * level * 2 + "Recursión derecha ", end = "")
-    rs, rl, rr = maxSubArray(a, c , r, level = level + 1, Verbose = Verbose);
-    if Verbose: print (" " * level * 2 + "} Resultado: ", a[rl:rr])
-    if Verbose: print()
-#    if Verbose: print ("rs", rs, rl, rr, a[c:], a[rl:rr])
-    if Verbose: print(" " * level * 2 + "Recursión centro " + str(a[l:r]) + " {")
-    cs, cl, cr = maxCenter(a, c, l, r, level = level + 1, Verbose = Verbose)
-    if Verbose: print(" " * level * 2 + "} Resultado " + str(cs) + " " + str(a[l:r]))
-    if Verbose: print()
-    level -= 1
-    m = max (cs, ls, rs)
-    if m == cs:
-        return cs, cl, cr;
-    elif m == ls:
-        return ls, ll, lr
-    elif m == rs:
-        return rs, rl, rr;
-
-#a = [1, 2, 3, -8, 2, 3, -2, 2, 3, -5, 8, 1, -3, 1, 5, -8, -9, 10, 1, -1, -2, 7]
-#a = [-2, -5, -6, 1, 2, 3]
-#a =  [1, 2, 5, -1,  6, 3]
-a = [1, -2, 3]
-#a = [1, -2]
-#a = [1,2,3, -2, -5, -6]
-#a = [1, 2, 3, 2, 5,6,7,8,9,10]
-s, b, c = maxSubArray(a, Verbose = True)
-print("} Resultado", s,a[b:c])
-```
-
-*Results:*
+### Ejemplo de ejecución
 
 ```python
 [1, -2, 3] {
@@ -319,7 +233,7 @@ Por lo que $SM$ posee la suma total máxima de todos los elementos recorridos.
 Finalmente retornamos el valor de la suma máxima, así como los límites de los
 brazos izquierdo y derecho.
 
-### Correctitud del algoritmo maxSubArray
+### Tiempo de ejecución del algoritmo maxSubArray
 
 El algoritmo maxSubArray realiza dos llamadas recursivas con un problema cuyo
 tamaño es la mitad del problema inicial. Además de la llamada a la función
@@ -330,34 +244,82 @@ $$
 T(n) \leq 2\cdot T \left ( n/2 \right ) + O(n)
 $$
 
-El algoritmo es correcto para un arreglo que de un elemento. Esto es debido a
-que cuando recibimos un elemento retornamos su posición y su valor como suma
-máxima.
+Este algoritmo tiene la particularidad de cumplir con el teorema maestro.
 
-En el apartado anterior comprobamos que la parte $O(n)$ de la función de
-recurrencia es correcta. Podemos comprobar si el resto del algoritmo lo es por
-medio de una prueba por sustitución:
-
-Buscamos un $m < n$ Para probar si se cumple  $T(m)$. Puesto que si $T(m)$ es
-cierto entonces $T(n)$ también lo es.
-
-Sabemos que $T(m)$ es un problema de más pequeño que $T(n)$. Por lo que:
+El cual nos dice que para toda función de recursión de la forma
 
 $$
-  T(n) > T(m)
+T(n) \leq a \cdot T  \left ( n/b \right) + O(n^c)
 $$
 
-Con:
+La complejidad estará dada por:
+
+* $O(n^c \cdot \log n)$ En el caso de que $a = b^c$
+* $O(n^c)$ En el caso de que $a < b^c$
+* $O(n^{\log_b a})$ En el caso de que $a > b^c$
+
+En el caso del algoritmo del sub arreglo máximo recursivo. Los valores de
+$a, b, c$ serían:
 
 $$
-T(m) \leq 2 \cdot T(n/4) + O(n)
+a = 2 \\
+b = 2 \\
+c = 1
 $$
 
-Reemplazando ambas ecuaciones en $T(n)> T(m)$ obtenemos que:
+$$a = b^c = 2$$
+
+De lo anterior se obtiene que:
+$$T(n) = O(n^c \cdot \log n) = O(n \log n)$$
+
+### Prueba por inducción
+
+Asumimos que $T(n) \leq O(n \log n)$.
 
 $$
-2 \cdot T(n/2) + O(n) > 2 \cdot T(n/4) + O(n)
+T(n) \leq 2 \cdot T(n/2) + c_1n \\
+$$
+  
+$$
+T(n) \leq c_2 n \log (n) \\
+T(n/2) \leq c_2 (n/2) \cdot \log (n/2) \\
+T(n/2) \leq c_2 (n/2)  \cdot (\log n - \log_2(2)) \\
+T(n/2) \leq c_2 (n/2)  \cdot (\log n - 1) \\
 $$
 
-Reduciendo términos semejantes obtenemos que $T(n/2) > T(n/4)$. Lo cual es
-correcto para todo $n$.
+$$
+T(n) \leq 2 \cdot T(n/2) + c_1n \\
+T(n) \leq 2 \cdot  (c_2 (n/2)  \cdot (\log n - 1))+ c_1n \\
+T(n) \leq (c_2 n  \cdot (\log (n) - 1))+ c_1n \\
+T(n) \leq n((c_2  \cdot (\log (n) - 1))+ c_1) \\
+c_2n\log (n) \leq n((c_2  \cdot (\log (n) - 1))+ c_1) \\
+c_2\log (n) \leq (c_2  \cdot (\log (n) - 1))+ c_1 \\
+c_2\log (n) - c_2  \cdot \log (n) + c_2 \leq c_1 \\
+0 \leq c_1 - c_2 \\
+c_2 \leq c_1 \\
+$$
+
+## Experimentos
+
+### Comparación con el algoritmo de Kadane
+
+El algoritmo de Kadane consiste en recorrer linealmente el
+arreglo como si fuera una cortina. Se actualizan a medida que uno
+se desplaza por el arreglo los limites izquierdo y derecho.
+
+
+```c```
+
+Del gráfico podemos observar que efectivamente el algoritmo de Kadane
+es mucho más rápido que el algoritmo recursivo para el problema del
+sub-arreglo máximo.
+
+### Nivel de recursión máximo
+
+Para cada llamada recursiva compararemos el nivel de la llamada actual
+con el nivel máximo alcanzado. De esta manera obtendremos el nivel
+máximo de recursividad dependiendo del tamaño del arreglo $n$.
+
+Se espera que el nivel de recursiones converga a un valor específico
+
+Podemos interpretar que no existe un valor al que converja el número de recursiones. Al parecer, este depende de $n$ de forma que $lvl(n) = c \cdot n \log n$. Sin embargo demostrar esto requiere más experimentos.
