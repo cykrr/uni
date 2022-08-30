@@ -1,9 +1,17 @@
 # HeapSort
 
+## Índice
+<!--toc:start-->
+- [Descripción del problema de ordenamiento](#descripción-del-problema-de-ordenamiento)
+- [Descripción del algoritmo](#descripción-del-algoritmo)
+- [Implementación del algoritmo HeapSort](#implementación-del-algoritmo-heapsort)
+<!--toc:end-->
+
 ## Descripción del problema de ordenamiento
 
 Dada una secuencia de $n$ elementos $A[A_0, ...,  A_n]$, buscamos una
-permutación de la entrada, llámese $B[B_0, ..., B_n]$ de manera que se cumpla que
+permutación de la entrada, llámese $B[B_0, ..., B_n]$ de manera que se
+cumpla que:
 
 $$
 B_0 \leq B_1 \leq ... \leq B_n
@@ -21,50 +29,98 @@ $L: 2p + 1$ y $R: 2p + 2$. Siendo $L$ el hijo izquierda y $R$ el hijo derecha.
 ## Implementación del algoritmo HeapSort
 
 ```python
-# @param arr Arreglo
-# @param i Posición del elemento a reubicar
-def reubicar(arr, i, Verbose = False):
+def max_heap(
+        arr: list[int],
+        ):
+    """
+    Permuta arr de forma que la permutación de
+    elementos formen un montículo de máximos.
 
-  mayor = i # Guarda el mayor elemento encontrado
+    Parameters:
+    ---
+    arr: Arreglo a permutar
+    """
 
-  n = len(arr) 
-  l = 2*i + 1 # Hijo izq
-  r = 2*i + 2 # Hijo der
+    # Desde el ultimo elemento padre hacia atrás
+    # Reubicamos para formar el maxHeap
 
-  # El mayor es el hijo izquierdo
-  if arr[l] > arr[i]:
-    if Verbose: print("El mayor es el hijo izquierdo")
-    mayor = l;
+    for i in range(len(arr) // 2  - 1, -1, -1):
+        reubicar(arr, i)
 
-  # El mayor es el hijo derecho
-  elif arr[r] > arr[i]: 
-    if Verbose: print("El mayor es el hijo derecho")
-    mayor = r
+def reubicar(
+        arr: list[int],
+        i: int,
+        longitud: int = -1,
+        verbose: bool = False,
+        level: int = 0
+        ):
+    """
+    Reubica un elemento "i" en el montículo
+    ubicado en el subarreglo "arr" de longitud
+    "n".
 
-  # Si el mayor no es la raiz, la reubicamos y reposicionamos la nueva raiz
+    Parameters:
+    ---
+    arr: Arreglo
+    i: Posición del elemento a reubicar
+    n: longitud del subarreglo
+    verbose: switch de print detallado
 
-  if mayor != i:
-    arr[mayor], arr[i] = arr[i], arr[mayor]
-    reubicar(arr, mayor)
+    level: (interno) Nivel de recursión
 
-end = '\033[0m'
-bold = '\033[1;4m'
+    """
 
-arr = [2,8,5,3,9,1]
-reubicar(arr, 0)
-print(arr)
-```
+    # Si recibimos la opción predeterminada es
+    # porque queremos todo el arreglo
+    if longitud == -1:
+        longitud = len(arr)
 
-*Results:*
-```
-Traceback (most recent call last):
-  File "/tmp/mdeval//mainmd_23_56.py", line 31, in <module>
-    reubicar(arr, 0)
-  File "/tmp/mdeval//mainmd_23_56.py", line 25, in reubicar
-    reubicar(arr, mayor)
-  File "/tmp/mdeval//mainmd_23_56.py", line 25, in reubicar
-    reubicar(arr, mayor)
-  File "/tmp/mdeval//mainmd_23_56.py", line 12, in reubicar
-    if arr[l] > arr[i]:
-IndexError: list index out of range
+    mayor = i # Iteramos desde la raíz
+
+    left = 2*i + 1 # Hijo izq
+    right = 2*i + 2 # Hijo der
+
+    # Si alguno de los hijos sobrepasa el límite
+    # del subarreglo entonces los desactivamos
+    # para no guardarlos
+
+    if left >= longitud:
+        left = -1
+    if right >= longitud:
+        right = -1
+
+    # El mayor es el hijo izquierdo?
+    if left != -1 and arr[left] > arr[mayor]:
+        mayor = left
+
+    # El mayor es el hijo derecho?
+    if right != -1 and arr[right] > arr[mayor]:
+        mayor = right
+
+    # Si el mayor no es la raiz, la reubicamos y
+    # reposicionamos la nueva raiz
+    if mayor != i:
+        arr[mayor], arr[i] = arr[i], arr[mayor]
+        reubicar(arr, mayor, longitud,
+            verbose, level = level+1)
+
+def heap_sort(arr, verbose = False):
+    """
+    Ordena un arreglo arr por medio del algoritmo
+    heap sort.
+    """
+    longitud = len(arr)
+    max_heap(arr)
+    ## Contador de elementos ordenados
+    sorted_count = 0
+
+    while sorted_count < longitud:
+        # swap del ultimo elemento con el primero
+        arr[0] , arr[-sorted_count] = \
+                arr[-sorted_count], arr[0]
+        # Reubicar nueva raiz en el subarreglo
+        reubicar(arr, 0, longitud - sorted_count - 1,
+                verbose)
+        sorted_count +=1
+    return arr
 ```
