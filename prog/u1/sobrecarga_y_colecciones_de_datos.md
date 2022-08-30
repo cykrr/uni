@@ -45,8 +45,7 @@ a un objeto de la clase con la que fue definido, así como la dirección
 null.
 
 La instanciación de un arreglo no instancia los objetos que pued
-referenciar. Los objetos a referenciar desde un arreglo deben
-instanciarse individualmente,
+referenciar. Los objetos a referenciar desde un arreglo deben instanciarse individualmente
 
 Se debe instanciar cada objeto y luego asociarlo al arreglo.
 
