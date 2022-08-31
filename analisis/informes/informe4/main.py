@@ -139,6 +139,6 @@ def print_heap(arr, head = 0, level = 0):
     if not level:
         print ("---")
 
-a = [2,8,5,3,9,1]
-print("in:\t", a)
-print("out:\t", heap_sort(a))
+#a = [2,8,5,3,9,1]
+#print("in:\t", a)
+#print("out:\t", heap_sort(a))
