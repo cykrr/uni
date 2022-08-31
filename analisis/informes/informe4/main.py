@@ -21,6 +21,7 @@ def max_heap(
 
     for i in range(len(arr) // 2  - 1, -1, -1):
         reubicar(arr, i)
+        print(arr)
 
 def reubicar(
         arr: list[int],
@@ -142,3 +143,8 @@ def print_heap(arr, head = 0, level = 0):
 #a = [2,8,5,3,9,1]
 #print("in:\t", a)
 #print("out:\t", heap_sort(a))
+
+a = [-3,1,2,4,5]
+
+heap_sort(a)
+print(a)
