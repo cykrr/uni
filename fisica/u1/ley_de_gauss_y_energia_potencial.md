@@ -31,13 +31,13 @@ $$
 \phi_E = \oint {
     \vec E
     \cdot
-    d\vecA
+    d \vec A
 } =
 
 \cfrac {
     Q_\text{enc}
 } {
-    \varepsilon_0
+    \varepsilon _0
 }
 $$
 
@@ -64,20 +64,20 @@ objeto cargado. De este objeto se estudia el campo eléctrico tanto en su
 interior como en el exterior de este. Para hacerlo:
 
 1. Se define una “Superficie Gaussiana”. Esta superficie se dibuja dentro o
-   fuera del objeto cargado, dependiendo donde queramos estudiar el campo. Su
-   forma tiene relación con la del cuerpo estudiado.
+fuera del objeto cargado, dependiendo donde queramos estudiar el campo. Su
+forma tiene relación con la del cuerpo estudiado.
 
 2. Estudiamos si el campo es uniforme o no sobre la superficie que va a
-   atravesar. Esto puede facilitar los cálculos. Luego, procedemos a calcular el
-   flujo eléctrico que atraviesa esta “Superficie Gaussiana”.
+atravesar. Esto puede facilitar los cálculos. Luego, procedemos a calcular el
+flujo eléctrico que atraviesa esta “Superficie Gaussiana”.
 
 3. Una vez calculamos el flujo, ahora debemos calcular la carga encerrada en el
-   cuerpo cargado. La carga encerrada a su vez, se relaciona con la densidad de
-   carga en el cuerpo. Si nos interesa el campo dentro del cuerpo estudiado, la
-   carga encerrada será siempre una porción de la carga total, que debemos
-   calcular. Si nos interesa el campo fuera del cuerpo estudiado, la carga
-   encerrada en este caso será siempre la carga total contenida en el cuerpo.
-   Luego, se procede a despejar el campo eléctrico a partir del flujo.
+cuerpo cargado. La carga encerrada a su vez, se relaciona con la densidad de
+carga en el cuerpo. Si nos interesa el campo dentro del cuerpo estudiado, la
+carga encerrada será siempre una porción de la carga total, que debemos
+calcular. Si nos interesa el campo fuera del cuerpo estudiado, la carga
+encerrada en este caso será siempre la carga total contenida en el cuerpo.
+Luego, se procede a despejar el campo eléctrico a partir del flujo.
 
 ### Ejemplo: campo eléctrico de una esfera sólida
 
