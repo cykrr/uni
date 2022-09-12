@@ -27,19 +27,7 @@ esfera de mayor área, **decimos que en ambos casos el flujo es el mismo.**
 Para **cualquier** distribución de carga o cuerpo cargado **y encerrado
 completamente** por una superficie:
 
-$$
-\phi_E = \oint {
-    \vec E
-    \cdot
-    d \vec A
-} =
-
-\cfrac {
-    Q_\text{enc}
-} {
-    \varepsilon _0
-}
-$$
+$$\phi_E = \oint { \vec E \cdot d \vec A } = \cfrac { Q_\text{enc} } { \varepsilon _0 }$$
 
 Se dice que el flujo que atraviesa esta superficie es igual a la carga
 encerrada, dividida entre la permeabilidad eléctrica en el vacío.
